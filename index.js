@@ -13,6 +13,6 @@ Array.prototype.myReduce = function(callback, initialValue) {
   const numbers = [1, 2, 3, 4];
   const sum = numbers.myReduce((total, currentNumber) => total + currentNumber);
   console.log(sum); 
-  
+
  
   
