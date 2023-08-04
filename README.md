@@ -451,7 +451,32 @@ in this example, we define a generator function `generateNum` that uses a while 
 -------------
 # Question 9 
 ## Create a prototype of the reduce method.
+
+```js
+Array.prototype.myReduce = function(callback, initialValue) {
+    let acc = initialValue;
+    for (let i = 0; i < this.length; i++) {
+      if (acc !== undefined) {
+        acc = callback(acc, this[i], i, this);
+      } else {
+        acc = this[i];
+      }
+    }
+    return acc;
+  };
+  
+  const numbers = [1, 2, 3, 4];
+  const sum = numbers.myReduce((total, currentNumber) => total + currentNumber);
+  console.log(sum); 
+  // Output:
+  10
+```
 ### Explaination -
+In this example, we define a new method` myReduce` on the `Array prototype`. This method takes two arguments: a `callback function` and an` initial value` for the `accumulator`. The method sets the value of the `accumulator` to the initial value.
+
+The method then uses a for loop to iterate over the elements of the array. On each iteration, it checks if the `accumulator` is not undefined. If it is not undefined, it calls the `callback function` with four arguments: the current value of the `accumulator`, the current element of the array, the current index, and the array itself. The` callback function` can use these arguments to perform some computation and return a new value for the` accumulator`. If the `accumulator` is` undefined`, it is set to the current element of the array.
+After all elements of the array have been processed, the method returns the final value of the `accumulator`.
+In our example, i use this `myReduce` method to find the sum of an array of numbers. We pass a `callback function` that takes two arguments:` total` and `currentNumber`. The function returns the sum of these two values. When i call the` myReduce` method on our array of numbers, it `returns` the sum of all elements in the array and logged it.
 
 
 
