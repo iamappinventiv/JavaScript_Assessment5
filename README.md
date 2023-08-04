@@ -156,7 +156,7 @@ main();
 
 ```
 #### Code Explanation - 
-This code defines an asynchronous function `main` that fetches data from a URL using the `fetch function`. The data is in JSON format, so it is converted to a JavaScript object using the `.json()` method. The data is then mapped over, and for each element, the name, email, phone number, and company name are logged to the console. If there is an error during the process, it is caught and logged to the `console`. Finally, the main function is called to run the code.
+This code defines an asynchronous function `main` that fetches data from a URL using the `fetch function`. The data is in JSON format, so it is converted to a JavaScript object using the `.json()` method. The data is then mapped , and for each element, the name, email, phone number, and company name are logged to the console. If there is an error during the process, it is caught and logged to the `console`. Finally, the main function is called to run the code.
 
 -------------
 -------------
