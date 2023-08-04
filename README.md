@@ -420,7 +420,7 @@ In summary, this code demonstrates how closures can remember the values of varia
 # Question 8 
 ## What are generator functions? Explain it with the help of an example.
 ### Explaination -
-**Generator functions**** are special functions in JS that can be paused and resumed. They are defined using the `function* syntax`, and when called, they return a generator object. This object has a `.next()` method that can be used to execute the `generator function` until it reaches the next `yield` statement, at which point it pauses and returns the yielded value. The `.next()` method can be called again to resume execution of the generator function from where it left .
+In JS, generator functions are unique operations that support `pausing` and `restarting`. When called, they return a generator object and are defined using the `'function* syntax'`. The "generator function" can be run using the object's `".next()"` method up until it encounters the subsequent `"yield"` statement, at which point it pauses and returns the yielded value. You can continue the generator function's execution by invoking the `'.next()' `method once again.
 
 #### Code Example :
 ```js
