@@ -454,19 +454,20 @@ in this example, we define a generator function `generateNum` that uses a while 
 
 ```js
 Array.prototype.myReduce = function(callback, initialValue) {
-    let acc = initialValue;
+    let result = initialValue;
+   
     for (let i = 0; i < this.length; i++) {
-      if (acc !== undefined) {
-        acc = callback(acc, this[i], i, this);
+      if (result !== undefined) {
+        result = callback(result, this[i], i, this);
       } else {
-        acc = this[i];
+        result = this[i];
       }
     }
-    return acc;
+    return result;
   };
   
   const numbers = [1, 2, 3, 4];
-  const sum = numbers.myReduce((total, currentNumber) => total + currentNumber);
+  const sum = numbers.myReduce((total, currentNumber) => total + currentNumber,0);
   console.log(sum); 
   // Output:
   10
